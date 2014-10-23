@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace SquidSolutions
+namespace SquidSolutions.EventTracker
 {
 	/*
 	 * The base event model class. It defines basic information common to every events.

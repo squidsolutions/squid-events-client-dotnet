@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace SquidSolutions
+namespace SquidSolutions.EventTracker.Client
 {
 	public class Flusher
 	{

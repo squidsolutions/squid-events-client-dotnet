@@ -7,3 +7,12 @@
 /Users/sergefantino/squid_dev/server-side-tracking/EventTracker.NET/Test/bin/Debug/Newtonsoft.Json.dll
 /Users/sergefantino/squid_dev/server-side-tracking/EventTracker.NET/Test/bin/Debug/EventTracker.NET.dll
 /Users/sergefantino/squid_dev/server-side-tracking/EventTracker.NET/Test/bin/Debug/EventTracker.NET.dll.mdb
+/Users/sergefantino/git/squid-events-client-dotnet/EventTracker.NET/Test/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/sergefantino/git/squid-events-client-dotnet/EventTracker.NET/Test/bin/Debug/Test.dll.mdb
+/Users/sergefantino/git/squid-events-client-dotnet/EventTracker.NET/Test/bin/Debug/Test.dll
+/Users/sergefantino/git/squid-events-client-dotnet/EventTracker.NET/Test/obj/Debug/Test.dll
+/Users/sergefantino/git/squid-events-client-dotnet/EventTracker.NET/Test/obj/Debug/Test.dll.mdb
+/Users/sergefantino/git/squid-events-client-dotnet/EventTracker.NET/Test/bin/Debug/nunit.framework.dll
+/Users/sergefantino/git/squid-events-client-dotnet/EventTracker.NET/Test/bin/Debug/Newtonsoft.Json.dll
+/Users/sergefantino/git/squid-events-client-dotnet/EventTracker.NET/Test/bin/Debug/EventTracker.NET.dll
+/Users/sergefantino/git/squid-events-client-dotnet/EventTracker.NET/Test/bin/Debug/EventTracker.NET.dll.mdb

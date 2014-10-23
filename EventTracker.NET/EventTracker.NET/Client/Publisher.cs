@@ -8,8 +8,9 @@ using System.Net;
 using System.IO;
 using System.Web;
 using System.Threading;
+using System.Diagnostics;
 
-namespace SquidSolutions
+namespace SquidSolutions.EventTracker.Client
 {
 	/// <summary>
 	/// main class to publish event to a queue and batch then to the Event Tracker Server
@@ -33,7 +34,14 @@ namespace SquidSolutions
 
 		internal void CheckConfig(Config config)
 		{
-			// check the config
+			if (config.AppKey==null || config.AppKey.Length==0) {
+				String msg = "Event Tracker client configuration error: missing the appKey";
+				throw new InvalidOperationException(msg);
+			}
+			if (config.SecretKey==null || config.SecretKey.Length==0) {
+				String msg = "Event Tracker client configuration error: missing the secretKey";
+				throw new InvalidOperationException(msg);
+			}
 		}
 
 		public Stats getStats() {
@@ -122,7 +130,11 @@ namespace SquidSolutions
 			byte[] raw = Encoding.UTF8.GetBytes(serialize);
 			string data = Convert.ToBase64String(raw);
 			String signature = computeSignature(data);
+			Stopwatch watch = new Stopwatch ();
+			watch.Start ();
 			HttpStatusCode response = doPost(Config.Endpoint, Config.AppKey, signature, data);
+			watch.Stop ();
+			Console.Out.WriteLine ("http latency = "+watch.ElapsedMilliseconds/1000.0+"s");
 			if (response == HttpStatusCode.Accepted) {
 				Interlocked.Add (ref this.successful, events.Count);
 			} else {

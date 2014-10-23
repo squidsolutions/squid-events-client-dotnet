@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace SquidSolutions
+namespace SquidSolutions.EventTracker
 {
 	public class EventTracker
 	{
 
 		static readonly object padlock = new object();
 
-		public static EventTrackerClient Client { get; private set; }
+		public static Client.EventTrackerClient Client { get; private set; }
 
 		/// <summary>
 		/// Initialize the EventTracker with the Config.
@@ -18,7 +18,7 @@ namespace SquidSolutions
 			lock (padlock)
 			{
 				if (Client == null || !Client.IsRunning()) {
-					Client = new EventTrackerClient (config);
+					Client = new Client.EventTrackerClient (config);
 				}
 			}
 		}

@@ -33,11 +33,8 @@
   <ItemGroup>
     <Compile Include="EventModel\EventModel.cs" />
     <Compile Include="EventTracker.cs" />
-    <Compile Include="EventTrackerClient.cs" />
-    <Compile Include="Tracker\Publisher.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="DefaultConfig.cs" />
-    <Compile Include="Tracker\Flusher.cs" />
     <Compile Include="Stats.cs" />
     <Compile Include="EventModel\UsageModel.cs" />
     <Compile Include="EventModel\AccountModel.cs" />
@@ -48,10 +45,13 @@
     <Compile Include="EventModel\RetrievalEvent.cs" />
     <Compile Include="EventModel\SearchEvent.cs" />
     <Compile Include="EventModel\StartSessionEvent.cs" />
+    <Compile Include="Client\Publisher.cs" />
+    <Compile Include="Client\Flusher.cs" />
+    <Compile Include="Client\EventTrackerClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="EventModel\" />
-    <Folder Include="Tracker\" />
+    <Folder Include="Client\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">

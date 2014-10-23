@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SquidSolutions
+namespace SquidSolutions.EventTracker
 {
 	/// <summary>
 	/// Properties to track search events. It extends from the Account model.

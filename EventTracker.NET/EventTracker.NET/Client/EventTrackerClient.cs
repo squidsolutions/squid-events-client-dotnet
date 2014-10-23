@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SquidSolutions
+namespace SquidSolutions.EventTracker.Client
 {
 	public class EventTrackerClient
 	{

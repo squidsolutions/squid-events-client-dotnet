@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SquidSolutions
+namespace SquidSolutions.EventTracker
 {
 	/// <summary>
 	/// Usage event is just a generic collection of properties that can be integrated in various type of events

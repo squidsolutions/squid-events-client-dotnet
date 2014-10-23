@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SquidSolutions
+namespace SquidSolutions.EventTracker
 {
 	public class DefaultConfig
 	{
