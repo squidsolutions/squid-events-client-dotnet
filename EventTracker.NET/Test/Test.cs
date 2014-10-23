@@ -21,9 +21,8 @@ namespace Test
 		public void TestCaseEventTracker()
 		{
 			Config conf = new Config ("squid-test", "9ff7b38a3d6a45f1a7db0c5e12161b3f");
-			conf.MaxFlusherCount = 5;
+			conf.MaxFlusherCount = 2;
 			conf.Endpoint = "http://localhost:8080/tracker/api/v1.0";
-			conf.SendTimeout = 0;
 			EventTracker.Initialize (conf);
 			Stopwatch watch = new Stopwatch ();
 			watch.Start ();
