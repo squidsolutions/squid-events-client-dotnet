@@ -9,14 +9,14 @@ The library will handle all the work to send the events to the Tracker Server in
 Getting started
 ---------------
 
-## Dependencies
+### Dependencies
 
 The SDK relies on:
 
 * .NET 4.5
 * Newtonsoft.json for json support
 
-## Initialization
+### Initialization
 
 ```
 using SquidSoltions.EventTracker;
@@ -34,7 +34,7 @@ You must specify your application key and secret key. If not provided the Initia
 Tracking events
 ---------------
 
-## creating an Event
+### creating an Event
 
 The comprehensive documentation for Events is available at the https://github.com/squidsolutions/squid-events-api.
 
@@ -43,7 +43,7 @@ Following are several examples covering the three kind of currently supported ev
 * SearchEvent
 * RetrievalEvent
 
-### start a new session event
+#### start a new session event
 
 This is an example of a new session event created for a visitor
 
@@ -61,7 +61,7 @@ EventModel Event = new StartSessionEvent ()
 	.WithUserID ("Tom");
 ```
 
-### search event
+#### search event
 
 This is an example of a search event
 
@@ -82,7 +82,7 @@ EventModel Event = new SearchEvent ()
 	.WithUserID ("Tom");
 ```
 
-### retrieval event
+#### retrieval event
 
 This is an exemple of a retrieval event, providing extensive article definition:
 
@@ -114,7 +114,7 @@ EventModel Event = new RetrievalEvent ()
 	.WithUserID ("Tom");
 ```
 
-## sending event
+### sending event
 
 You can easily send the previous event.
 
