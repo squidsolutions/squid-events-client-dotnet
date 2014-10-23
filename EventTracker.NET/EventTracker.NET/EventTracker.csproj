@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{566CD80B-D1E6-4F9D-93A3-EB50ADEE18DB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SquidSolutions</RootNamespace>
+    <AssemblyName>EventTracker.NET</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="EventModel\EventModel.cs" />
+    <Compile Include="EventTracker.cs" />
+    <Compile Include="EventTrackerClient.cs" />
+    <Compile Include="Tracker\Publisher.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="DefaultConfig.cs" />
+    <Compile Include="Tracker\Flusher.cs" />
+    <Compile Include="Stats.cs" />
+    <Compile Include="EventModel\UsageModel.cs" />
+    <Compile Include="EventModel\AccountModel.cs" />
+    <Compile Include="EventModel\SessionModel.cs" />
+    <Compile Include="EventModel\SearchModel.cs" />
+    <Compile Include="EventModel\RetrievalModel.cs" />
+    <Compile Include="EventModel\ArticleModel.cs" />
+    <Compile Include="EventModel\RetrievalEvent.cs" />
+    <Compile Include="EventModel\SearchEvent.cs" />
+    <Compile Include="EventModel\StartSessionEvent.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="EventModel\" />
+    <Folder Include="Tracker\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

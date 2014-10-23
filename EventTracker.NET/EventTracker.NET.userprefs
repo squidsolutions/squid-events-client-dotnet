@@ -1,0 +1,36 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="EventTracker.NET/EventModel/EventModel.cs">
+    <Files>
+      <File FileName="EventTracker.NET/SomeTest.cs" Line="1" Column="1" />
+      <File FileName="EventTracker.NET/EventModel/EventModel.cs" Line="23" Column="23" />
+      <File FileName="Test/Test.cs" Line="1" Column="1" />
+      <File FileName="Test/packages.config" Line="1" Column="1" />
+      <File FileName="../../../git/Analytics.NET/Analytics/Request/BlockingRequestHandler.cs" Line="1" Column="1" />
+      <File FileName="EventTracker.NET/EventTracker.cs" Line="1" Column="1" />
+      <File FileName="EventTracker.NET/EventTrackerClient.cs" Line="1" Column="1" />
+      <File FileName="EventTracker.NET/Config.cs" Line="1" Column="1" />
+      <File FileName="../../../git/Analytics.NET/Analytics/Config.cs" Line="1" Column="1" />
+      <File FileName="../../../git/Analytics.NET/Analytics/Defaults.cs" Line="1" Column="1" />
+      <File FileName="EventTracker.NET/DefaultConfig.cs" Line="1" Column="1" />
+      <File FileName="EventTracker.NET/Tracker/Flusher.cs" Line="1" Column="1" />
+      <File FileName="EventTracker.NET/Tracker/Publisher.cs" Line="1" Column="1" />
+      <File FileName="../../../git/Analytics.NET/Analytics/Flush/AsyncFlushHandler.cs" Line="1" Column="1" />
+      <File FileName="../../../git/Analytics.NET/Analytics/Flush/BlockingQueue.cs" Line="1" Column="1" />
+      <File FileName="../../../git/Analytics.NET/Test/FlushTests.cs" Line="1" Column="1" />
+      <File FileName="EventTracker.NET/packages.config" Line="1" Column="1" />
+      <File FileName="../../../git/Analytics.NET/Analytics/Analytics.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/sergefantino/squid_dev/server-side-tracking/EventTracker.NET/Test/Test.cs" line="26" column="1" />
+      <Breakpoint file="/Users/sergefantino/squid_dev/server-side-tracking/EventTracker.NET/Test/Test.cs" line="115" column="1" />
+      <Breakpoint file="/Users/sergefantino/squid_dev/server-side-tracking/EventTracker.NET/Test/Test.cs" line="84" column="1" />
+      <Breakpoint file="/Users/sergefantino/squid_dev/server-side-tracking/EventTracker.NET/Test/Test.cs" line="57" column="1" />
+      <Breakpoint file="/Users/sergefantino/squid_dev/server-side-tracking/EventTracker.NET/Test/Test.cs" line="34" column="1" />
+      <Breakpoint file="/Users/sergefantino/squid_dev/server-side-tracking/EventTracker.NET/EventTracker.NET/Tracker/Flusher.cs" line="33" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

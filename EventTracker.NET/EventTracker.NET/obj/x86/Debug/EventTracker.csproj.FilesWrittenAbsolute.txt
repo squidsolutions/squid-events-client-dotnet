@@ -1,0 +1,6 @@
+/Users/sergefantino/squid_dev/server-side-tracking/EventTracker.NET/EventTracker.NET/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/sergefantino/squid_dev/server-side-tracking/EventTracker.NET/EventTracker.NET/bin/Debug/Newtonsoft.Json.dll
+/Users/sergefantino/squid_dev/server-side-tracking/EventTracker.NET/EventTracker.NET/bin/Debug/EventTracker.NET.dll.mdb
+/Users/sergefantino/squid_dev/server-side-tracking/EventTracker.NET/EventTracker.NET/bin/Debug/EventTracker.NET.dll
+/Users/sergefantino/squid_dev/server-side-tracking/EventTracker.NET/EventTracker.NET/obj/x86/Debug/EventTracker.NET.dll
+/Users/sergefantino/squid_dev/server-side-tracking/EventTracker.NET/EventTracker.NET/obj/x86/Debug/EventTracker.NET.dll.mdb

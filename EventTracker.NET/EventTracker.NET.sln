@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventTracker", "EventTracker.NET\EventTracker.csproj", "{566CD80B-D1E6-4F9D-93A3-EB50ADEE18DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{DEB578BC-4900-463E-AC9A-D1943582C42A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{566CD80B-D1E6-4F9D-93A3-EB50ADEE18DB}.Debug|x86.ActiveCfg = Debug|x86
+		{566CD80B-D1E6-4F9D-93A3-EB50ADEE18DB}.Debug|x86.Build.0 = Debug|x86
+		{566CD80B-D1E6-4F9D-93A3-EB50ADEE18DB}.Release|x86.ActiveCfg = Release|x86
+		{566CD80B-D1E6-4F9D-93A3-EB50ADEE18DB}.Release|x86.Build.0 = Release|x86
+		{DEB578BC-4900-463E-AC9A-D1943582C42A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DEB578BC-4900-463E-AC9A-D1943582C42A}.Debug|x86.Build.0 = Debug|Any CPU
+		{DEB578BC-4900-463E-AC9A-D1943582C42A}.Release|x86.ActiveCfg = Release|Any CPU
+		{DEB578BC-4900-463E-AC9A-D1943582C42A}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = EventTracker.NET\EventTracker.csproj
+	EndGlobalSection
+EndGlobal
