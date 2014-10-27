@@ -5,7 +5,7 @@ namespace SquidSolutions.EventTracker
 	public class DefaultConfig
 	{
 	
-		public static  String endpoint = "https://events.tracker.squidanalytics.com/tracker/api/v1.0";
+		public static  string endpoint = "http://events.tracker.squidanalytics.com/";
 
 		public static int maxFlusherCount = 1;
 

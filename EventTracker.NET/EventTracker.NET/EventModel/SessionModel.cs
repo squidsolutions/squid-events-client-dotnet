@@ -18,11 +18,11 @@ namespace SquidSolutions.EventTracker
 		public static string SessionStartEventType = "start";
 
 		///
-     	/// this is a persistent ID associated with the browser (or rich application) generating the event on the client side. 
+     	/// this is a persistent UUID associated with the browser (or rich application) generating the event on the client side. 
      	/// Usually it will be retrieve from a cookie.
      	/// It can be used to group multiple session with the same browser
      	/// 
-		public static string SessionBrowserID = "ss:browserID";
+		public static string SessionBrowserID = "ss:browserUUID";
 
 		///
      	/// this is the full referrer’s URL

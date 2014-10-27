@@ -17,9 +17,12 @@ namespace SquidSolutions.EventTracker.Client
 	/// </summary>
 	public class Publisher
 	{
+
+		private static int HTTP_TIMEOUT = 6000;
 	
 		private bool Go = true;
 		private Config Config;
+		private string url = null;
 		private BlockingCollection<EventModel> _queue;
 
 		private long successful = 0;
@@ -27,9 +30,26 @@ namespace SquidSolutions.EventTracker.Client
 
 		public Publisher (Config config)
 		{
-			CheckConfig(config);
+			CheckConfig (config);
+			this.url = CheckURL (config);
 			this.Config = config;
 			this._queue = new BlockingCollection<EventModel> (config.QueueLimit);
+		}
+
+		/// <summary>
+		/// check that the endpoint is correctly configured and that the service is up and running
+		/// </summary>
+		/// <returns>The UR.</returns>
+		/// <param name="config">Config.</param>
+		private string CheckURL(Config config) {
+			if (config.Endpoint==null || config.Endpoint=="") {
+				String msg = "Event Tracker client configuration error: missing the endpoint";
+				throw new InvalidOperationException(msg);
+			}
+			string url = config.Endpoint;
+			if (!url.EndsWith("/")) url += "/";
+			url += Constants.BASE_SERVICE+"/v"+Constants.VERSION;
+			return url;
 		}
 
 		internal void CheckConfig(Config config)
@@ -153,9 +173,15 @@ namespace SquidSolutions.EventTracker.Client
 			try
 			{
 				//
-				string connection = endpoint + "?";
-				connection += "key=" + HttpUtility.UrlEncode(appKey);
-				connection += "&sig=" + HttpUtility.UrlEncode(signature);
+				string connection = url + "?";
+				connection += Constants.APP_KEY_PARAM + "=" + HttpUtility.UrlEncode(appKey);
+				connection += "&" + Constants.SIGNATURE_PARAM + "=" + HttpUtility.UrlEncode(signature);
+				if (this.Config.AppVerion!=null && this.Config.AppVerion!="") {
+					connection += "&" + Constants.APP_VERSION_PARAM + "=" + HttpUtility.UrlEncode(this.Config.AppVerion);
+				}
+				if (this.Config.AppTest) {
+					connection += "&" + Constants.APP_TEST_PARAM + "=1";
+				}
 				Uri uri = new Uri(connection);
 
 				// set the current request time
@@ -169,7 +195,7 @@ namespace SquidSolutions.EventTracker.Client
 				// https://segment.io/docs/tracking-api/reference/#authentication
 				//request.Headers["Authorization"] = BasicAuthHeader(batch.WriteKey, "");
 
-				request.Timeout = 6000;
+				request.Timeout = HTTP_TIMEOUT;
 				request.ContentType = "application/json";
 				request.Method = "POST";
 

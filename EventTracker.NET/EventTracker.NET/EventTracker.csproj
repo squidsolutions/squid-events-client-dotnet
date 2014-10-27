@@ -48,6 +48,7 @@
     <Compile Include="Client\Publisher.cs" />
     <Compile Include="Client\Flusher.cs" />
     <Compile Include="Client\EventTrackerClient.cs" />
+    <Compile Include="Constants.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="EventModel\" />

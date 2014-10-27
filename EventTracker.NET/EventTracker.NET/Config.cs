@@ -9,6 +9,10 @@ namespace SquidSolutions.EventTracker
 
 		public String AppKey { get; set; }
 
+		public String AppVerion { get; set; }
+
+		public Boolean AppTest { get; set; }
+
 		public String SecretKey { get; set; }
 
 		public int MaxFlusherCount { get; set; }
