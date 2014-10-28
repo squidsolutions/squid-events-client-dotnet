@@ -9,9 +9,9 @@ namespace SquidSolutions.EventTracker
 
 		public String AppKey { get; set; }
 
-		public String AppVerion { get; set; }
+		public String AppVersion { get; set; }
 
-		public Boolean AppTest { get; set; }
+		public Boolean AppTestFlag { get; set; }
 
 		public String SecretKey { get; set; }
 

@@ -176,10 +176,10 @@ namespace SquidSolutions.EventTracker.Client
 				string connection = url + "?";
 				connection += Constants.APP_KEY_PARAM + "=" + HttpUtility.UrlEncode(appKey);
 				connection += "&" + Constants.SIGNATURE_PARAM + "=" + HttpUtility.UrlEncode(signature);
-				if (this.Config.AppVerion!=null && this.Config.AppVerion!="") {
-					connection += "&" + Constants.APP_VERSION_PARAM + "=" + HttpUtility.UrlEncode(this.Config.AppVerion);
+				if (this.Config.AppVersion!=null && this.Config.AppVersion!="") {
+					connection += "&" + Constants.APP_VERSION_PARAM + "=" + HttpUtility.UrlEncode(this.Config.AppVersion);
 				}
-				if (this.Config.AppTest) {
+				if (this.Config.AppTestFlag) {
 					connection += "&" + Constants.APP_TEST_PARAM + "=1";
 				}
 				Uri uri = new Uri(connection);

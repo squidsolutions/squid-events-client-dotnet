@@ -22,12 +22,11 @@ namespace Test
 		{
 			Config conf = new Config ("squid-test", "9ff7b38a3d6a45f1a7db0c5e12161b3f");
 			conf.MaxFlusherCount = 2;
-			conf.Endpoint = "http://localhost:8080/tracker/api/v1.0";
 			EventTracker.Initialize (conf);
 			Stopwatch watch = new Stopwatch ();
 			watch.Start ();
-			int count = 10000;
-			int total = 1000 * 3;
+			int count = 1000;
+			int total = count * 3;
 			for (int i = 0; i < count; i++) {
 				EventTracker.Send (CreateSessionEvent());
 				EventTracker.Send (CreateSearchEvent());
@@ -51,7 +50,6 @@ namespace Test
 		public void TestCaseConnection()
 		{
 			Config conf = new Config ("squid-test", "9ff7b38a3d6a45f1a7db0c5e12161b3f");
-			conf.Endpoint = "http://localhost:8080/tracker/api/v1.0";
 			EventTracker.Initialize (conf);
 			EventTracker.Send (CreateSessionEvent());
 			EventTracker.Send (CreateSearchEvent());
