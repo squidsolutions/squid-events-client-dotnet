@@ -19,6 +19,7 @@ namespace SquidSolutions.EventTracker.Client
 	{
 
 		private static int HTTP_TIMEOUT = 6000;
+		private static int MAX_RETRY = 3;
 	
 		private bool Go = true;
 		private Config Config;
@@ -152,7 +153,7 @@ namespace SquidSolutions.EventTracker.Client
 			String signature = computeSignature(data);
 			Stopwatch watch = new Stopwatch ();
 			watch.Start ();
-			HttpStatusCode response = doPost(Config.Endpoint, Config.AppKey, signature, data);
+			HttpStatusCode response = doPostRetry(Config.Endpoint, Config.AppKey, signature, data);
 			watch.Stop ();
 			Console.Out.WriteLine ("http latency = "+watch.ElapsedMilliseconds/1000.0+"s");
 			if (response == HttpStatusCode.Accepted) {
@@ -166,6 +167,19 @@ namespace SquidSolutions.EventTracker.Client
 			HMACSHA1 algo = new HMACSHA1 (Encoding.UTF8.GetBytes(Config.SecretKey));
 			byte[] hash = algo.ComputeHash (Encoding.UTF8.GetBytes (data));
 			return Convert.ToBase64String(hash);
+		}
+
+		internal HttpStatusCode doPostRetry(string endpoint, string appKey, string signature, string data) {
+			int retry = 0;
+			HttpStatusCode status;
+			do {
+				if (retry>0) Console.Out.WriteLine ("Retry x" + retry);
+				status = doPost (endpoint, appKey, signature, data);
+				if (status == HttpStatusCode.BadGateway) {
+					retry++;
+				}
+			} while (status == HttpStatusCode.BadGateway && retry<MAX_RETRY);
+			return status;
 		}
 
 		internal HttpStatusCode doPost(string endpoint, string appKey, string signature, string data) {
