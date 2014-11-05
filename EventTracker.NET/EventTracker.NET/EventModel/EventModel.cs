@@ -11,17 +11,19 @@ namespace SquidSolutions.EventTracker
 	public class EventModel : Dictionary<String,Object>
 	{
 
+		private static Int64 epoch = 621355968000000000;
+
 		// the schemaName must be a reference identifier
 		public static string SchemaName = "xx:schemaName";
 
 		// the type of event, must be a reference
 		public static string EventType = "xx:eventType";
 
-		// the date of the event; this one will set both the time and time-zone
+		// the date of the event in UTC time,
 		public static string EventDate = "xx:eventDate";
 
-		// the date timezone if not GMT-0
-		public static string EventTimeZone = "xx:eventTimeZone";
+		// the local timezone
+		public static string EventTimeZone = "xx:eventTMZ";
 
 		// the serverIP; this is optional, the Tracker Server can add this latter
 		public static string ServerIP = "xx:serverIP";
@@ -32,9 +34,10 @@ namespace SquidSolutions.EventTracker
 		}
 
 		public EventModel(string schemaName, string eventType) {
+			// default to add DateEvent only for an actual event
 			base.Add(SchemaName,schemaName);
 			base.Add(EventType,eventType);
-			WithEventDate(DateTime.Now);
+			WithEventDate(DateTime.UtcNow);
 		}
 
 		public EventModel with(string key, Object value) {
@@ -71,32 +74,14 @@ namespace SquidSolutions.EventTracker
 		}
 			
 		/// <summary>
-		/// the date of the event; this one will only set the time
+		/// the date of the event in locale time; this one will set both the locale and UTC time
 		/// </summary>
 		/// <returns>The event date.</returns>
 		/// <param name="date">Date.</param>
 		public EventModel WithEventDate(DateTime date) {
-			base.Add(EventDate, date.Ticks);
-			return this;
-		}
-
-		/// <summary>
-		/// the date of the event in millisecond since Epoch
-		/// </summary>
-		/// <returns>The event date.</returns>
-		/// <param name="date">Date.</param>
-		public EventModel WithEventDate(long date) {
-			base.Add(EventDate, date);
-			return this;
-		}
-
-		/// <summary>
-		/// the date timezone if not GMT-0
-		/// </summary>
-		/// <returns>The event time zone.</returns>
-		/// <param name="tmz">Tmz.</param>
-		public EventModel WithEventTimeZone(TimeZone tmz) {
-			base.Add(EventTimeZone, tmz.StandardName);
+			base[EventDate] = (date.ToUniversalTime().Ticks-epoch)/10000;
+			TimeZoneInfo tmz = TimeZoneInfo.Local;
+			base[EventTimeZone] = tmz.IsDaylightSavingTime(date)?tmz.DaylightName:tmz.StandardName;
 			return this;
 		}
 

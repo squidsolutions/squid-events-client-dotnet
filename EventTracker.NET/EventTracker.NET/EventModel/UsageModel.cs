@@ -53,7 +53,7 @@ namespace SquidSolutions.EventTracker
 		public UsageModel(string schemaName) : base(SchemaName) {
 		}
 
-		public UsageModel(string schemaName, string eventType) : base(schemaName,eventType) {
+		public UsageModel(string schemaName, string eventType) : base(schemaName, eventType) {
 		}
 
 		/// <summary>
