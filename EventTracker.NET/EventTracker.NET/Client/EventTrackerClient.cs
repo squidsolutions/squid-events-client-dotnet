@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 namespace SquidSolutions.EventTracker.Client
 {
+
+	/// <summary>
+	/// the main Event Tracker client
+	/// </summary>
 	public class EventTrackerClient
 	{
 
