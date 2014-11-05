@@ -51,7 +51,7 @@ namespace SquidSolutions.EventTracker
 		protected RetrievalModel(String schemaName, String eventType) : base(schemaName, eventType) {
 		}
 
-		protected RetrievalModel(String eventType) : base(eventType) {
+		protected RetrievalModel(String eventType) : base(RetrievalSchema, eventType) {
 		}
 
 		/// <summary>

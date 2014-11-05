@@ -25,7 +25,7 @@ namespace SquidSolutions.EventTracker
 		{
 		}
 
-		public AccountModel (string schemaName, string eventType) : base(schemaName,eventType)
+		public AccountModel (string schemaName, string eventType) : base(schemaName, eventType)
 		{
 		}
 			

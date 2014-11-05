@@ -21,6 +21,7 @@ namespace Test
 		public void TestCaseEventTracker()
 		{
 			Config conf = new Config ("squid-test", "9ff7b38a3d6a45f1a7db0c5e12161b3f");
+			conf.AppVersion = "dotNet-test";
 			conf.MaxFlusherCount = 2;
 			EventTracker.Initialize (conf);
 			Stopwatch watch = new Stopwatch ();
@@ -44,6 +45,20 @@ namespace Test
 			Assert.AreEqual (0, stats.QueueSize);
 			Assert.AreEqual (total, stats.Succeed);
 			Assert.AreEqual (0, stats.Failed);
+		}
+
+		[Test ()]
+		public void TestCaseModel() 
+		{
+			EventModel Event = CreateRetrievalEvent();
+			string serial = JsonConvert.SerializeObject(Event);
+			Console.WriteLine (serial);
+			Event.WithEventDate(new DateTime(2014,09,01));
+			serial = JsonConvert.SerializeObject(Event);
+			Console.WriteLine (serial);
+			TimeZoneInfo tmz = TimeZoneInfo.Local;
+			Console.WriteLine (tmz.DaylightName);
+			Console.WriteLine (tmz.StandardName);
 		}
 
 		[Test ()]
@@ -121,6 +136,8 @@ namespace Test
 				.WithUserID ("Tom");
 			return Event;
 		}
+
+
 
 			
 	}

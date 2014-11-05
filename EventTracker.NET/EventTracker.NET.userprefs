@@ -1,6 +1,6 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Test/Test.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="Test/Test.cs" Line="1" Column="1" />
       <File FileName="Test/packages.config" Line="1" Column="1" />
@@ -11,14 +11,28 @@
       <File FileName="../../Analytics.NET/Analytics/Flush/BlockingQueue.cs" Line="1" Column="1" />
       <File FileName="../../Analytics.NET/Test/FlushTests.cs" Line="1" Column="1" />
       <File FileName="../../Analytics.NET/Analytics/Analytics.cs" Line="1" Column="1" />
-      <File FileName="EventTracker.NET/Client/Publisher.cs" Line="1" Column="1" />
+      <File FileName="EventTracker.NET/Client/Publisher.cs" Line="67" Column="67" />
       <File FileName="EventTracker.NET/EventModel/SessionModel.cs" Line="1" Column="1" />
       <File FileName="EventTracker.NET/Config.cs" Line="1" Column="1" />
       <File FileName="EventTracker.NET/DefaultConfig.cs" Line="1" Column="1" />
       <File FileName="EventTracker.NET/Constants.cs" Line="1" Column="1" />
       <File FileName="EventTracker.NET/EventTracker.cs" Line="1" Column="1" />
       <File FileName="EventTracker.NET/Client/Flusher.cs" Line="1" Column="1" />
+      <File FileName="EventTracker.NET/Client/EventTrackerClient.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True">
+          <Node name="Test" expanded="True">
+            <Node name="Test" expanded="True">
+              <Node name="Test" expanded="True">
+                <Node name="TestCaseEventTracker" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
